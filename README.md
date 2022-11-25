@@ -10,30 +10,51 @@ For general information about developing packages, see the Dart guide for
 and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/developing-packages).
 -->
+### Cred like slider written in dart for flutter
+[![license](https://img.shields.io/github/license/MohanSaiManthri/cred_slider?logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQEAQAAADlauupAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAABgAAAAYADwa0LPAAAAB3RJTUUH5QgMBTIvsJF/KwAAAAJiS0dEAACqjSMyAAAA6klEQVQ4y53TrwrCUBTH8cWNJatgVJF1weCf4DuIQebqlowKewqD2YcQ38GwB9jAIJoMrk1Qzle2C4rN469/zrnncK5l/RGwbeh0rP/wcAhZBiLqIhBF8HxSJU3LlyhwHIPvw+0GjwfS7yvwaoXMZnA8QhBAGP6OK1gmzw2OY0XnXg+KgneWSwWu1+F8NvB+h/lcgR0HDofKyvWKDAaKmVstWCwMThKk0VB0nk7N0jYbU8R1f4TtNux2sN3Cel1tW5pNxbyn02fTZZHJRDFzt8tX9nvlfY9GH3y5gOcpC9RqyHhsjsZxtL/zBX3z7zeyXyFwAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDIxLTA4LTEyVDA1OjUwOjQ3KzAwOjAwP4besgAAACV0RVh0ZGF0ZTptb2RpZnkAMjAyMS0wOC0xMlQwNTo1MDo0NyswMDowME7bZg4AAAAASUVORK5CYII=)](https://github.com/MohanSaiManthri/cred_slider/blob/master/LICENSE)
+[![pub.dev](https://img.shields.io/pub/v/cred_slider?label=pub.dev&logo=data%3Aimage%2Fpng%3Bbase64%2CiVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAQAAAC1QeVaAAAABGdBTUEAALGPC%2FxhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA%2F4ePzL8AAAAHdElNRQflCAwFLhzpNkNgAAAAAW9yTlQBz6J3mgAAATFJREFUGNNN0M0qhGEYh%2FHrft73NaZoImNKkYUFCxt7KdYWFiymKKfgCBTHYMshWFkppVijJp81skBMM9P4SN557r8FC9f2t7sM4IN3SqhgUwxYSxe4KAIBvskoo7JN63XryN7C1JdF2oB1KOAhmWMoXNkHhuKkXxbqOQETEBdsyWatjAMo93PbC%2FsRuuQVP1bVV9XWX37vj7Gaw435tlzLwtfV%2BsMnb6rha3QX9SrXivjHn16X4kGweYYQgGO7bNAGiji5EbSjQwIShsOufrlPHSPZbPqJVfyhXft0A5Izvdic9dPUc7KJtb4PvJykaZ9lMRLTM70wQ4%2FdWYNBclTxse510ks%2FkQ5ZthbeODKoMUEXjYSRUEtjXlSJHhvuPY3Y7%2FgOJTSajofoCDI92m3ODyeBsv3LZ4DoAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDIxLTA4LTEyVDA1OjQ2OjI4KzAwOjAwwzEIWwAAACV0RVh0ZGF0ZTptb2RpZnkAMjAyMS0wOC0xMlQwNTo0NjoyOCswMDowMLJssOcAAAAASUVORK5CYII%3D&logoColor=green)](https://pub.dartlang.org/packages/cred_slider)
+## Showcase
+![screen-20221125-114041_5_AdobeExpress](https://user-images.githubusercontent.com/36568937/203954734-0b14b73f-86fe-48fc-bef1-a69334b0da1b.gif)
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+![screen-20221125-115431_2_AdobeExpress](https://user-images.githubusercontent.com/36568937/203957729-58d6de11-18f1-48d2-882c-a45b70f4a8f5.gif)
 
-## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+Get wonderful cred like slider for your horizontal list view with minimal efforts
 
-## Getting started
+## Getting Started
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+In your flutter project add the dependency:
 
-## Usage
-
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
-
-```dart
-const like = 'sample';
+```yaml
+dependencies:
+  cred_slider: ^0.0.1
 ```
 
-## Additional information
+## Usage
+```dart
+import 'package:cred_slider/cred_slider.dart';
+```
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+```dart
+ CredSlider(
+   controller: _scrollController,
+   barWidth: 120,
+   thumbWidth: 12,
+   barHeight: 14,
+   barColor: Colors.amber,
+   thumbColor: Colors.purple.shade300,
+);
+```
+
+> Note: Don't forgot to add `BouncingScrollPhysics` to your listView. This is required to get bouncy fluid animation
+
+### ListView Example
+```dart
+ListView.builder(
+  physics: const BouncingScrollPhysics(), // add this to get fluid animation
+  scrollDirection: Axis.horizontal,
+  controller: _scrollController,
+);
+```
+
+### Thanks for using my package 🙏
