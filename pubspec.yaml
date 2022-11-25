@@ -1,7 +1,7 @@
 name: cred_slider
 description: A cred like slider written in dart for flutter.
 version: 0.0.1
-homepage: https://www.linkedin.com/in/mohan-sai-manthri/
+homepage: https://github.com/MohanSaiManthri/cred_slider/
 
 environment:
   sdk: '>=2.18.4 <3.0.0'
